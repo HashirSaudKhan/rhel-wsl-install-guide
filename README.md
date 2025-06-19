@@ -14,18 +14,17 @@ This README explains step-by-step how to install Red Hat Enterprise Linux (RHEL)
 - Optional: VMware Workstation 17.5+ for dual virtualization support
 
 ---
+## 🧰 How to Install WSL
 
-## 📥 Step 1: Download RHEL WSL Image
+Open PowerShell as Administrator and run:
 
-1. Create a free Red Hat account at: https://developers.redhat.com/
-2. Visit: https://developers.redhat.com/products/rhel/download
-3. Download the WSL image (e.g., `rhel-10.0-x86_64-wsl2.tar.gz`) OR Download from repo rhel-10.0-x86_64-wsl2.tar.gz
-4. Open cmd type: mkdir "%USERPROFILE%\Documents\ISO"
-5. Save it here: `C:\Users\<YourUsername>\Documents\ISO\rhel-10.0-x86_64-wsl2.tar.gz` 
-                              
+```
+wsl --install
+```
+
+This will automatically install WSL and the default Linux distro (usually Ubuntu). You can ignore or remove Ubuntu later if you're only using RHEL.
+
 ---
-
-## 🔧 Step 2: Enable Required Windows Features
 
 If you got this error
 ```
@@ -42,6 +41,16 @@ dism.exe /online /enable-feature /featurename:HypervisorPlatform /all /norestart
 ➡️ Then restart your computer.
 
 ---
+
+## 📥 Step 2: Download RHEL WSL Image OR Download from repo
+
+1. Create a free Red Hat account at: https://developers.redhat.com/
+2. Visit: https://developers.redhat.com/products/rhel/download
+3. Download the WSL image (e.g., `rhel-10.0-x86_64-wsl2.tar.gz`) OR Download from repo rhel-10.0-x86_64-wsl2.tar.gz
+4. Open cmd type: mkdir "%USERPROFILE%\Documents\ISO"
+5. Save it here: `C:\Users\<YourUsername>\Documents\ISO\rhel-10.0-x86_64-wsl2.tar.gz` 
+                              
+
 
 ## 📁 Step 3: Create Target Install Folder
 
